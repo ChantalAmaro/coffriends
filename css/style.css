@@ -1,0 +1,310 @@
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/*HEADER*/
+#header-coffriends {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: black;
+}
+
+#header-coffriends::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #d1a349cc;
+  border-radius: 1px;
+}
+
+.logo_coffriends img {
+  width: 120px;
+}
+
+.menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.menu a:hover {
+  border: solid 2px #d1a349cc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #d1a449af;
+}
+
+/* IMAGEN HOME */
+.img_home img {
+  width: 100%;
+}
+
+/* TITULO PRINCIPAL PAGINAS*/
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  display: block;
+  padding-bottom: 8px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centrar la línea */
+  bottom: 0;
+  height: 2px;
+  width: 450px; /* Ancho fijo de la línea debajo */
+  background-color: #d1a349cc;
+  border-radius: 2px;
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #d1a349cc;
+  padding: 30px 50px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: black;
+}
+
+.footer * {
+  color: black;
+}
+
+.footer-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  gap: 40px;
+}
+
+.footer-seccion {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 200px;
+}
+
+.footer-lema {
+  margin-top: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  font-weight: 15px;
+}
+
+.footer-links-doble {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.footer-links-doble ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.footer-links-doble a {
+  text-decoration: none;
+}
+
+.footer-titulos {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-contacto {
+  border-left: 2px solid black;
+  padding-left: 20px;
+  margin-left: 150px;
+}
+
+.icono-linea {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.icono {
+  width: 18px;
+  margin-right: 10px;
+}
+
+.footer-propiedad {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+/*PRODUCTOS HOME*/
+.nuestros_productos_home {
+  justify-items: center;
+  margin-bottom: 50px;
+}
+.productos_home {
+  display: flex;
+}
+.productos_home img {
+  height: 360px;
+  padding: 0 20px ;
+}
+.productos_home h3, .productos_home p {
+padding-left: 20px;
+}
+
+/*APRENDIZAJE HOME*/
+.aprendizaje_home {
+  justify-items: center;
+  margin-bottom: 50px;
+}
+.blogs {
+  display: flex;
+}
+
+.blogs img {
+  height: 320px;
+  padding: 0 50px ;
+}
+
+.boton {
+  display: block;
+  border: solid 2px #d1a349cc;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px 0 15px 0;
+}
+
+.boton:hover {
+  background-color: #d1a449af;
+  color: black;
+  font-weight: bold;
+}
+
+/*NOSOTROS*/
+.nosotros {
+  justify-items: center;
+}
+
+.nosotros img {
+  height: 400px;
+}
+
+.nosotros_p1 {
+  display: flex;
+  align-items: center;
+}
+
+.nosotros_p3 {
+  justify-items: end;
+}
+
+/*PRODUCTOS*/
+.productos {
+  justify-items: center;
+}
+
+.productos img {
+  height: 400px;
+}
+/*APRENDIZAJE*/
+.aprendizaje {
+  justify-items: center;
+}
+
+.puntuacion_SCA img {
+  height: 400px;
+}
+
+.puntuacion_SCA {
+  display: flex;
+  align-items: center;
+}
+
+.escala_SCA {
+  display: flex;
+  align-items: center;
+}
+
+.escala_SCA img {
+  height: 600px;
+}
+/*CONTACTO*/
+.contacto {
+  justify-items: center;
+}
+
+.detalle_contacto {
+  position: relative;
+  width: 100%;
+}
+
+.detalle_contacto img {
+  width: 100%;
+  height: auto;
+}
+
+.detalle_contacto p,
+.detalle_contacto h3 {
+  position: absolute;
+  height: px;
+  top: 20%; /* Ajusta la posición vertical del texto */
+  bottom: 20%;
+  left: 5%; /* Ajusta la posición horizontal del texto */
+  right: 5%;
+  color: white; /* Color del texto */
+  font-size: 18px; /* Tamaño del texto */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fondo semitransparente para mejorar la legibilidad */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
