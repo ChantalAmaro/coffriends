@@ -284,6 +284,10 @@ h2::after {
   font-weight: 700;
 }
 
+.contenedor-boton {
+  text-align: center;
+}
+
 /*NOSOTROS*/
 .nosotros {
   justify-items: center;
