@@ -38,6 +38,9 @@
           <li><a href="pages/contacto.html">Contacto</a></li>
         </ul>
       </nav>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
       <div class="icons">
         <span class="material-symbols-outlined"> search </span>
         <span class="material-symbols-outlined"> person </span>
@@ -184,13 +187,20 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="icons/location-icon.png" class="icono" />Iquique,
-              Chile.
+              <img src="icons/location-icon.png" class="icono" />Iquique, Chile.
             </a>
           </p>
         </div>
       </div>
       <div class="footer-propiedad">© 2025 Coffriends | Chile</div>
     </footer>
+    <script>
+      const toggleBtn = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".menu ul");
+
+      toggleBtn.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
