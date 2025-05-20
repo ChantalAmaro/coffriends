@@ -63,11 +63,7 @@ body {
 
 /* ICONOS HEADER */
 .icons {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 /* IMAGEN HOME */
@@ -208,14 +204,24 @@ h2::after {
 }
 .productos_home {
   display: flex;
-}
-.productos_home img {
-  height: 360px;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
   padding: 0 20px;
 }
-.productos_home h3,
-.productos_home p {
-  padding-left: 20px;
+.productos_home img {
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+  object-fit: contain;
+}
+.productos_home > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 280px;
+  margin: 0 15px;
 }
 
 /*APRENDIZAJE HOME*/
@@ -225,11 +231,26 @@ h2::after {
 }
 .blogs {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px; /* separa los elementos horizontal y verticalmente */
+  padding: 0 20px;
+}
+
+.blogs > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 280px; /* o el ancho que prefieras */
+  margin: 0 15px;
 }
 
 .blogs img {
-  height: 320px;
-  padding: 0 50px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
 }
 
 .boton {
@@ -239,7 +260,7 @@ h2::after {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 8px;
-  margin: 10px 0 15px 0;
+  margin: 40px 0 15px 0;
 }
 
 .boton:hover {
