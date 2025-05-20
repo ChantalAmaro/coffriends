@@ -9,7 +9,11 @@
       name="description"
       content="Amantes de compartir buenos momentos con amigos y un buen café"
     />
-    <link rel="shortcut icon" href="../icons/Coffriends.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../icons/Coffriends.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,6 +38,9 @@
           <li><a href="../pages/contacto.html">Contacto</a></li>
         </ul>
       </nav>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
       <div class="icons">
         <!--FALTA AGREGAR ICONOS-->
       </div>
@@ -153,7 +160,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="../icons/whatsapp-icon.png" class="icono" />+569 4288 9733
+              <img src="../icons/whatsapp-icon.png" class="icono" />+569 4288
+              9733
             </a>
           </p>
 
@@ -171,5 +179,13 @@
       </div>
       <div class="footer-propiedad">© 2025 Coffriends | Chile</div>
     </footer>
+    <script>
+      const toggleBtn = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".menu ul");
+
+      toggleBtn.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
