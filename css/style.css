@@ -289,21 +289,64 @@ h2::after {
 }
 
 /*NOSOTROS*/
-.nosotros {
-  justify-items: center;
-}
-
-.nosotros img {
-  height: 400px;
-}
-
 .nosotros_p1 {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   align-items: center;
+  padding: 0 5%;
 }
 
-.nosotros_p3 {
-  justify-items: end;
+.nosotros_p1 img {
+  max-width: 450px;
+  height: auto;
+  flex: 1 1 300px;
+  margin: 0 20px 0 0;
+}
+
+.nosotros_p1 div {
+  flex: 1 1 400px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.nosotros div p {
+  display: block;
+  content: "";
+  margin-bottom: 10px;
+}
+
+.nosotros_p2 {
+  text-align: right;
+  padding-right: 5%;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+
+
+@media (max-width: 768px) {
+  .nosotros_p1 {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .nosotros_p1 img {
+    margin: 0 0 20px 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .nosotros_p1 div {
+    text-align: justify;
+  }
+
+  .nosotros_p2 {
+    text-align: right;
+    padding-right: 30px;
+  }
 }
 
 /*PRODUCTOS*/
