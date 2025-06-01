@@ -437,6 +437,7 @@ h5::after {
   width: 100%;
   flex-wrap: wrap;
   gap: 15px;
+  margin-bottom: 20px;
 }
 
 .Categorias p {
@@ -449,11 +450,28 @@ h5::after {
 
 .escala_SCA {
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
+  font-size: 18px;
 }
 
 .escala_SCA img {
-  height: 600px;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+
+.escala_SCA p span {
+  margin-right: 15px;
+}
+.escala_SCA p {
+  display: flex;
+  max-width: 600px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 /*CONTACTO*/
