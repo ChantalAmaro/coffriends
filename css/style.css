@@ -43,9 +43,18 @@ body {
   width: 120px;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 .menu ul {
   display: flex;
-  list-style-type: none;
+  list-style: none;
 }
 
 .menu li {
@@ -58,6 +67,7 @@ body {
   text-transform: uppercase;
   padding: 12px 22px;
   font-family: "Bebas Neue", sans-serif;
+  transition: all 0.3s ease;
 }
 
 .menu a:hover {
@@ -67,32 +77,25 @@ body {
   background-color: #d1a449af;
 }
 
-.menu a,
-.boton {
-  transition: all 0.3s ease;
-}
-
-/* ICONOS HEADER */
-.icons {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-
 /* IMAGEN HOME */
 .img_home img {
   width: 100%;
 }
 
-/* TITULO PRINCIPAL PAGINAS*/
+/* TITULOS */
+h2,
+h4,
+h5 {
+  position: relative;
+  display: block;
+  padding-bottom: 8px;
+  margin: 20px 0;
+}
+
 h2 {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: relative;
-  display: block;
-  padding-bottom: 8px;
-  color: white;
   text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
 }
@@ -101,10 +104,39 @@ h2::after {
   content: "";
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Centrar la línea */
+  transform: translateX(-50%);
   bottom: 0;
   height: 2px;
-  width: 450px; /* Ancho fijo de la línea debajo */
+  width: 450px;
+  background-color: #d1a349cc;
+  border-radius: 2px;
+}
+
+h4,
+h5 {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+h4::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-95%);
+  bottom: 0;
+  height: 1px;
+  width: 400px;
+  background-color: #d1a349cc;
+  border-radius: 2px;
+}
+
+h5::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-90%);
+  bottom: 0;
+  height: 1px;
+  width: 260px;
   background-color: #d1a349cc;
   border-radius: 2px;
 }
@@ -144,7 +176,6 @@ h2::after {
   margin-top: 10px;
   font-family: "Bebas Neue", sans-serif;
   font-size: 24px;
-  font-weight: 15px;
 }
 
 .footer-links-doble {
@@ -166,32 +197,13 @@ h2::after {
 
 .footer-titulos {
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin: 20px 0 10px;
 }
 
 .footer-contacto {
   border-left: 2px solid black;
   padding-left: 20px;
   margin-left: 150px;
-}
-
-.icono-linea {
-  display: flex;
-  align-items: center;
-  margin: 6px 0;
-  font-size: 15px;
-}
-
-.icono {
-  width: 18px;
-  margin-right: 10px;
-}
-
-.footer-propiedad {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.9em;
 }
 
 .footer-contacto a {
@@ -208,25 +220,42 @@ h2::after {
   font-weight: bold;
 }
 
-/*PRODUCTOS HOME*/
-.nuestros_productos_home {
+.footer-propiedad {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.icono-linea {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.icono {
+  width: 18px;
+  margin-right: 10px;
+}
+
+/*SECCIONES: PRODUCTOS HOME / APRENDIZAJE HOME */
+.nuestros_productos_home,
+.aprendizaje_home {
   justify-items: center;
   margin-bottom: 50px;
 }
-.productos_home {
+
+.productos_home,
+.blogs {
   display: flex;
   justify-content: center;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 15px;
   padding: 0 20px;
 }
-.productos_home img {
-  height: auto;
-  width: 100%;
-  max-width: 300px;
-  object-fit: contain;
-}
-.productos_home > div {
+
+.productos_home > div,
+.blogs > div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,28 +264,7 @@ h2::after {
   margin: 0 15px;
 }
 
-/*APRENDIZAJE HOME*/
-.aprendizaje_home {
-  justify-items: center;
-  margin-bottom: 50px;
-}
-.blogs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 60px; /* separa los elementos horizontal y verticalmente */
-  padding: 0 20px;
-}
-
-.blogs > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 280px; /* o el ancho que prefieras */
-  margin: 0 15px;
-}
-
+.productos_home img,
 .blogs img {
   width: 100%;
   max-width: 300px;
@@ -264,14 +272,15 @@ h2::after {
   object-fit: contain;
 }
 
+/* BOTÓN GENERAL */
 .boton {
   display: inline-block;
-  border: solid 2px #d1a349cc;
+  border: 2px solid #d1a349cc;
   color: white;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 8px;
-  margin: 40px auto 15px auto;
+  margin: 40px auto 15px;
   font-weight: 500;
   text-align: center;
   background-color: transparent;
@@ -302,7 +311,7 @@ h2::after {
   max-width: 450px;
   height: auto;
   flex: 1 1 300px;
-  margin: 0 20px 0 0;
+  margin-right: 20px;
 }
 
 .nosotros_p1 div {
@@ -319,34 +328,8 @@ h2::after {
 
 .nosotros_p2 {
   text-align: right;
-  padding-right: 5%;
-  padding-bottom: 30px;
-  padding-top: 10px;
+  padding: 10px 5% 30px;
   font-size: 18px;
-}
-
-
-
-@media (max-width: 768px) {
-  .nosotros_p1 {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-
-  .nosotros_p1 img {
-    margin: 0 0 20px 0;
-    width: 100%;
-    height: auto;
-  }
-
-  .nosotros_p1 div {
-    text-align: justify;
-  }
-
-  .nosotros_p2 {
-    text-align: right;
-    padding-right: 30px;
-  }
 }
 
 /*PRODUCTOS*/
@@ -418,31 +401,38 @@ h2::after {
   fill: currentColor;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .productos {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
-  .productos {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
-  }
-}
 /*APRENDIZAJE*/
 .aprendizaje {
-  justify-items: center;
-}
-
-.puntuacion_SCA img {
-  height: 400px;
-}
-
-.puntuacion_SCA {
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.aprendizaje img {
+  width: 100%;
+  max-width: 1200px;
+  filter: brightness(0.9);
+  border-radius: 12px;
+}
+
+.texto_sobre_img_fondo_aprendizaje {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-70%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  max-width: 550px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.texto_sobre_img_fondo_aprendizaje p {
+  display: block;
+  content: "";
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .escala_SCA {
@@ -453,6 +443,7 @@ h2::after {
 .escala_SCA img {
   height: 600px;
 }
+
 /*CONTACTO*/
 .contacto {
   justify-items: center;
@@ -464,34 +455,26 @@ h2::after {
 }
 
 .detalle_contacto img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
 }
 
 .detalle_contacto p,
 .detalle_contacto h3 {
   position: absolute;
-  height: px;
-  top: 20%; /* Ajusta la posición vertical del texto */
-  bottom: 20%;
-  left: 5%; /* Ajusta la posición horizontal del texto */
+  top: 20%;
+  left: 5%;
   right: 5%;
-  color: white; /* Color del texto */
-  font-size: 18px; /* Tamaño del texto */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Fondo semitransparente para mejorar la legibilidad */
+  color: white;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 5px;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   #header-coffriends {
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .menu-toggle {
@@ -523,7 +506,24 @@ h2::after {
     gap: 15px;
   }
 
-  /* FOOTER */
+  .nosotros_p1 {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .nosotros_p1 img {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .nosotros_p2 {
+    padding-right: 30px;
+  }
+
+  .productos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
   .footer-contenido {
     flex-direction: column;
     align-items: center;
@@ -551,7 +551,7 @@ h2::after {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .logo_coffriends img {
     width: 100px;
   }
@@ -567,57 +567,9 @@ h2::after {
   .footer-lema {
     font-size: 20px;
   }
-}
 
-/* BOTÓN HAMBURGUESA (oculto en desktop) */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* MENU HEADER */
-.menu ul {
-  display: flex;
-  list-style: none;
-}
-
-/* RESPONSIVE HEADER */
-@media (max-width: 768px) {
-  #header-coffriends {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: black;
-    padding: 10px 0;
-  }
-
-  .menu ul.show {
-    display: flex;
-  }
-
-  .menu li {
-    margin: 5px 0;
-    text-align: center;
-  }
-
-  .icons {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  .productos {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
   }
 }
