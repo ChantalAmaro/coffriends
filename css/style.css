@@ -474,6 +474,30 @@ h5::after {
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .texto_sobre_img_fondo_aprendizaje {
+    position: static;
+    transform: none;
+    background-color: transparent;
+    padding: 20px;
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .texto_sobre_img_fondo_aprendizaje p {
+    font-size: 16px;
+  }
+
+  .aprendizaje {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .aprendizaje img {
+    border-radius: 8px;
+  }
+}
+
 /*CONTACTO*/
 .contacto {
   justify-items: center;
