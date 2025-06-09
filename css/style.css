@@ -500,29 +500,73 @@ h5::after {
 
 /*CONTACTO*/
 .contacto {
-  justify-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacto img {
+  width: 100%;
+  filter: brightness(0.9);
 }
 
 .detalle_contacto {
-  position: relative;
-  width: 100%;
-}
-
-.detalle_contacto img {
-  max-width: 100%;
-}
-
-.detalle_contacto p,
-.detalle_contacto h3 {
   position: absolute;
   top: 20%;
   left: 5%;
   right: 5%;
   color: white;
-  font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  max-width: 500px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.detalle_contacto p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.icono-linea-contacto p {
+  display: absolute;
+  margin: 6px 0;
+  font-size: 20px;
+}
+
+.icono-linea-contacto img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.icono-linea-contacto a {
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.detalle_contacto_rrss {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  right: 5%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  max-width: 500px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.detalle_contacto_rrss p,
+.detalle_contacto_rrss h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.detalle_contacto_rrss a {
+  text-decoration: none;
+  margin-left: 20px;
 }
 
 /* MEDIA QUERIES */
